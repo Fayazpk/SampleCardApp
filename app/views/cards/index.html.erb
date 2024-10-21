@@ -1,0 +1,16 @@
+<div class="container mt-4">
+  <h1 class="mb-4">Cards</h1>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <% @cards.each do |card| %>
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title"><%= card.name %></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Price: $<%= number_with_precision(card.price, precision: 2) %></h6>
+            <p class="card-text"><%= card.description %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
